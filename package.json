@@ -1,0 +1,29 @@
+{
+  "name": "portfolio-fullstack",
+  "version": "1.0.0",
+  "description": "Full Stack portfolio page.",
+  "main": "server.js",
+  "scripts": {
+    "test": "\"\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chindowns/portfolio-fullstack.git"
+  },
+  "keywords": [
+    "MERN"
+  ],
+  "author": "Michael Downs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chindowns/portfolio-fullstack/issues"
+  },
+  "homepage": "https://github.com/chindowns/portfolio-fullstack#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "mongodb": "^3.5.7",
+    "mongoose": "^5.9.12",
+    "morgan": "^1.10.0"
+  }
+}
