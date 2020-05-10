@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const UserSchema = new Schema({
+const ResumeSchema = new Schema({
     name: String,
     email: {
         type: String,
@@ -16,16 +16,10 @@ const UserSchema = new Schema({
     
     city: String,
     state: String,
-    linkedinUser: String,
-    githubUser: String,
-
-    password: {
-        type: String,
-        validate: [/^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})/, "Password must be at least 8 characters, number and special"]
-    }
-
+    linkedinResume: String,
+    githubResume: String,
 });
 
-const User = mongoose.model("User", UserSchema);
+const Resume = mongoose.model("Resume", ResumeSchema);
 
-module.exports = User;
+module.exports = Resume;
