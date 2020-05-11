@@ -7,36 +7,32 @@ const JobHistorySchema = new Schema({
         required: [true, "Company is Required"],
         trim: true
     },
-
     jobTitle: {
         type: String,
         required: [true, "Job Title is Required"],
         trim: true
     },
-
     startDate: {
         type: Date,
         required: [true, "Start Date is Required"],
         trim: true
     },
-
     endDate: {
         type: Date,
         required: false,
         trim: true
     },
-
     city: {
         type: String,
         required: true,
         trim: true,
     },
-
     state: {
         type: String,
         required: true,
         trim: true,
-        match: [/../, "Please enter two state code"]
+        min: 2,
+        max: 2
     },
 
     accomplishments1: {

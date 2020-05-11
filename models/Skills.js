@@ -4,7 +4,7 @@ var Schema = mongoose.Schema;
 var SkillsSchema = new Schema({
     skill: {
         type: String,
-        required: true,
+        required: true
     },
 
     type: {

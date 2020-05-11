@@ -8,6 +8,11 @@ var ProjectsSchema = new Schema({
         trim: true
     },
 
+    imageLink: {
+        type: String,
+        required: true,
+    },
+
     repoLink: {
         type: String,
         required: true,
@@ -23,7 +28,7 @@ var ProjectsSchema = new Schema({
         required: true
     },
 
-    technologiesUsed: {
+    skills_id: {
         type: Array,
         required: true
     },

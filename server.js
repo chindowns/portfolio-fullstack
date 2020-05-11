@@ -23,7 +23,25 @@ app.set("view engine", "handlebars");
 
 // Routes
 require("./routes/html-routes.js")(app);
-require("./routes/api-routes.js")(app);
+
+db.Resume.create({ name: "Resume" })
+        .then(dbPortfolio => {
+            console.log(dbPortfolio);
+        })
+        .catch(({ message }) => {
+            console.log(message);
+        });
+
+app.get("/", (req, res) => {
+    res.render("index");
+});
+
+app.get("/resume/all", (req, res) => {
+    db.User.findAll({})
+        .then(dbResume => {
+            res.json(dbResume)
+        });
+});
 
 app.listen(PORT, () => {
     console.log(`App running on port ${PORT}!`);
